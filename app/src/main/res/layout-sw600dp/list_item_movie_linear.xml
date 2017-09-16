@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/movie_layout"
+    android:layout_width="match_parent"
+    android:layout_height="750dp"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <!-- item -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_gravity="center"
+        android:background="#fff"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Top -->
+        <LinearLayout
+            android:id="@+id/layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="4"
+            android:layout_gravity="center"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
+            <!-- Poster -->
+            <ImageView
+                android:id="@+id/poster_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:fitsSystemWindows="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/empty" />
+
+        </LinearLayout>
+
+        <!-- Release Date & Votes & Rating Holder -->
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_gravity="center"
+            android:layout_weight="0.5"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="20dp">
+
+            <!-- release date -->
+            <TextView
+                android:id="@+id/release_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="date"
+                android:layout_gravity="center"
+                android:gravity="center|left"
+                android:textColor="@color/colorDarkGray"
+                android:textSize="24sp" />
+
+            <!-- rating -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center|right"
+                android:orientation="horizontal">
+
+                <!-- votes -->
+                <TextView
+                    android:id="@+id/vote_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="votes"
+                    android:layout_gravity="center"
+                    android:gravity="center|right"
+                    android:textSize="24sp"
+                    android:layout_marginRight="12dp"
+                    android:textColor="@color/colorDarkGray"/>
+
+                <ImageView
+                    android:id="@+id/rating_image"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_star_black_48dp"
+                    android:tint="@color/colorAccent" />
+
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="12dp"
+                    android:gravity="center"
+                    android:text="5.0"
+                    android:textSize="24sp"
+                    android:textColor="@color/colorAccent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

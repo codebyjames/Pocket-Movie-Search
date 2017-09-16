@@ -1,0 +1,7 @@
+<resources>
+
+    <!--Animation Dimensions-->
+    <item name="scaleSize" format="float" type="dimen">1.1</item>
+    <item name="defaultScale" format="float" type="dimen">1.0</item>
+
+</resources>

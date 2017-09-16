@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/movie_layout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@android:color/transparent"
+    android:orientation="vertical">
+
+    <!-- item -->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_margin="5dp"
+        android:background="@drawable/movie_item_rounded_bottom"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <!-- Top -->
+        <!-- Poster Holder -->
+        <LinearLayout
+            android:id="@+id/layout_top"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:layout_gravity="center"
+            android:gravity="center|top"
+            android:orientation="vertical">
+
+            <!-- Poster -->
+            <ImageView
+                android:id="@+id/poster_image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:adjustViewBounds="true"
+                android:fitsSystemWindows="true"
+                android:scaleType="fitXY"
+                android:src="@drawable/empty" />
+
+        </LinearLayout>
+
+        <!-- Release Date & Votes & Rating Holder -->
+        <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:layout_below="@+id/layout_top">
+
+            <!-- release date -->
+            <TextView
+                android:id="@+id/release_date"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:text="date"
+                android:layout_gravity="center"
+                android:gravity="center|left"
+                android:textColor="@color/colorDarkGray"
+                android:textSize="13sp" />
+
+            <!-- rating -->
+            <LinearLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_gravity="center"
+                android:gravity="center|right"
+                android:orientation="horizontal">
+
+                <!-- votes -->
+                <TextView
+                    android:id="@+id/vote_count"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:text="votes"
+                    android:layout_gravity="center"
+                    android:gravity="center|right"
+                    android:textSize="13sp"
+                    android:layout_marginRight="8dp"
+                    android:textColor="@color/colorDarkGray"
+                    android:visibility="gone"/>
+                <!-- duration = gone (because not enough space in grid layout to show all textviews) -->
+
+                <ImageView
+                    android:id="@+id/rating_image"
+                    android:layout_width="16dp"
+                    android:layout_height="16dp"
+                    android:layout_gravity="center"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_star_black_48dp"
+                    android:tint="@color/colorAccent" />
+
+                <TextView
+                    android:id="@+id/rating"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:layout_marginLeft="8dp"
+                    android:gravity="center"
+                    android:text="5.0"
+                    android:textSize="13sp"
+                    android:textColor="@color/colorAccent"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>
